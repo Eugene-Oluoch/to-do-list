@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tasklist-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-block: 3rem;
+}
+
+.tasklist {
+    width: 95%;
+    max-width: 500px;
+    margin-inline: auto;
+    -webkit-box-shadow: 0 0 0.3rem 0.2rem #e6e6e6;
+    box-shadow: 0 0 0.3rem 0.2rem #e6e6e6;
+    border-radius: .2rem;
+    padding: 1rem;
+}
+
+.tasklist-add-input {
+    padding-top: 1rem;
+}
+
+.tasklist-add-input input {
+    padding: .1rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #666666;
+    font-size: .9rem;
+}
+
+.tasklist-add-input input:focus {
+    outline: none;
+}
+
+.tasklist-add-button {
+    padding: 1rem 0;
+}
+
+.tasklist-add-button input {
+    border: 1px solid #CFE2FF;
+    background-color: #CFE2FF;
+    color: #084298;
+    padding: .5rem;
+    border-radius: .2rem;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.tasklist-add-button input:hover {
+    background-color: #b3d1ff;
+    border: 1px solid #b3d1ff;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.tasklist-tasks-title {
+    border-top: 1px solid #666666;
+    padding: 1rem 0;
+}
+
+.tasklist-tasks-ul li {
+    margin-block: .5rem;
+    padding: .3rem;
+    border-radius: .2rem;
+    -webkit-box-shadow: 0 0 0 0.1rem #f2f2f2;
+    box-shadow: 0 0 0 0.1rem #f2f2f2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.tasklist-clear {
+    padding-top: 1rem;
+}
+
+.tasklist-clear button {
+    background-color: #f8d7da;
+    border: 1px solid #f8d7da;
+    color: #87262e;
+    padding: .5rem;
+    border-radius: .2rem;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.tasklist-clear button:hover {
+    background-color: #f4bec2;
+    border: 1px solid #f4bec2;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.task-name {
+    font-size: .8rem;
+}
+
+.task-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.task-options-delete {
+    padding-top: .1rem;
+}
+
+.task-options-edit,
+.task-options-delete {
+    margin-right: .3rem;
+    cursor: pointer;
+}
+
+.task-options img {
+    height: 1rem;
+}
+
+label {
+    display: none;
+}

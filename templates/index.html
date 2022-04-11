@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Task List</title>
+</head>
+
+<body>
+    <section class="tasklist-container">
+        <article class="tasklist">
+            <form method="post">
+                {% csrf_token %}
+                <h1 class="tasklist-title">Task List</h1>
+                <div class="tasklist-add-input">
+                    {{ form }}
+                </div>
+                <div class="tasklist-add-button">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+            <div class="tasklist-tasks-title">
+                <h1>Tasks</h1>
+            </div>
+            <div class="tasklist-tasks">
+                <ul class="tasklist-tasks-ul">
+                    {% if not tasks %}
+                    <h1>No tasks</h1>
+                    {% else %} {% for task in tasks %}
+                    <li>
+                        <div class="task-name">
+                            <h3>{{ task.name }}</h3>
+                        </div>
+                        <div class="task-options">
+                            <div class="task-options-edit">
+                                <a href="{% url 'edit' task.id %}"><img src="{% static 'images/edit.png' %}" alt="edit"></a>
+                            </div>
+                            <div class="task-options-delete">
+                                <a href="{% url 'delete' task.id %}"><img src="{% static 'images/remove.png' %}" alt="delete"></a>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %} {% endif %}
+                </ul>
+            </div>
+            <div class="tasklist-clear">
+                <a href="{% url 'clear' %}"><button>Clear All</button></a>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
